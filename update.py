@@ -63,7 +63,7 @@ if sigungu_code:
     if not df.empty:
         df = df[['지역코드', '도로명', '법정동', '지번', '아파트', '층', '전용면적', '월', '거래금액']]
     # 페이지네이션
-    page_size = 100
+    page_size = 1000
     total_pages = len(df) // page_size + (1 if len(df) % page_size > 0 else 0)
     page_number = st.sidebar.number_input('Page Number', min_value=1, max_value=total_pages, value=1)
     start_row = (page_number - 1) * page_size
